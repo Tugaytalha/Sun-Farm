@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+Flask===3.0.3
+Flask-Cors==5.0.0
+joblib
+requests
+scikit-learn==1.4.1.post1
+xgboost==2.1.1

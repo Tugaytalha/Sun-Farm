@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  flask-app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_ENV: production
+      FLASK_APP: app.py
+    restart: always   # Automatically restart if the app crashes
+    volumes:
+      - .:/app

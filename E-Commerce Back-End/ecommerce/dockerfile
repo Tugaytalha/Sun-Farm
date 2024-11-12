@@ -1,0 +1,20 @@
+# Base image olarak Maven kullanıyoruz
+FROM maven:3.8.4-openjdk-17 AS build
+
+# Çalışma dizinini ayarlıyoruz
+WORKDIR /app
+
+# pom.xml ve gerekli kaynakları kopyalıyoruz
+COPY ./E-Commerce\ Back-End/ecommerce/pom.xml ./
+COPY ./E-Commerce\ Back-End/ecommerce/src ./src
+
+# Maven ile uygulamayı derliyoruz
+RUN mvn clean package -DskipTests
+
+# Çalışma zamanı için JAR dosyasını kopyalıyoruz
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+
+# Uygulamayı başlatıyoruz
+ENTRYPOINT ["java", "-jar", "app.jar"]

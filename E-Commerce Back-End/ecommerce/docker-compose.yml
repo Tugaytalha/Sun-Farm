@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      SPRING_DATASOURCE_URL: jdbc:postgresql://213.250.134.157:5432/database-name
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: Osas123,
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_MAIL_HOST: smtp.gmail.com
+      SPRING_MAIL_PORT: 587
+      SPRING_MAIL_USERNAME: akymltya44@gmail.com
+      SPRING_MAIL_PASSWORD: dxsd yeiu fmgn iflo
+      UPLOAD_PATH: C:/path/to/upload/directory
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./uploads:/app/uploads
+

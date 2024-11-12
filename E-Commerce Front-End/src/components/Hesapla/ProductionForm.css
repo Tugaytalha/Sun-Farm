@@ -1,0 +1,83 @@
+.production-form-container {
+  max-width: 100%; /* Maksimum genişlik %100 olarak ayarlandı */
+  height: 100vh; /* Sayfa yüksekliğinin tamamını kaplar */
+  margin: 0; /* Margin sıfırlandı */
+  padding: 20px; /* İç boşluk */
+  background-color: #ffffff; /* Arka plan rengi */
+  border-radius: 0; /* Kenar yuvarlama kaldırıldı */
+  box-shadow: none; /* Gölge kaldırıldı */
+  display: flex; /* Flexbox kullanımı */
+  flex-direction: column; /* Dikey hizalama */
+  justify-content: center; /* Dikey merkezleme */
+}
+
+.production-form-container h2 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #155ab6;
+}
+
+.info-icon {
+  cursor: pointer;
+  margin-left: 5px;
+  color: #007bff;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-width: 200px;
+}
+
+.chart-container {
+  margin-top: 20px; /* Üstteki alan ile aralık vermek için */
+  border: 1px solid #ccc; /* Çerçeve rengi */
+  padding: 15px; /* İçerik ile çerçeve arasında boşluk */
+  border-radius: 5px; /* Kenarları yuvarlamak için */
+  background-color: #f9f9f9; /* Arka plan rengi */
+  overflow: auto; /* Taşma durumunda kaydırma çubuğu eklemek için */
+}
+
+.chart-container h4 {
+  margin: 0 0 10px 0; /* Başlık altındaki boşluk */
+  font-size: 1.2em; /* Başlık boyutu */
+  text-align: center; /* Başlık ortalanacak şekilde */
+}
+
+/* Responsive design için ekleme */
+@media (max-width: 600px) {
+  .chart-container {
+    padding: 10px; /* Mobilde daha az iç boşluk */
+  }
+}
